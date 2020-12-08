@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./../styles/Navbar.scss";
+import "./../styles/Navbar.css";
 import logo from "./../assets/WhiteLogo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
