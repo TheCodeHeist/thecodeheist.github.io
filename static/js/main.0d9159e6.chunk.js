@@ -1,0 +1,2 @@
+(this["webpackJsonpthecodeheist.github.io"]=this["webpackJsonpthecodeheist.github.io"]||[]).push([[0],{15:function(e,t,c){},25:function(e,t,c){"use strict";c.r(t);var i=c(0),n=c.n(i),s=c(8),h=c.n(s),r=(c(15),c(2));var o=function(){return Object(r.jsx)("div",{className:"App",children:Object(r.jsx)("h1",{children:"Basic App"})})},d=c(10);h.a.render(Object(r.jsx)(n.a.StrictMode,{children:Object(r.jsx)(d.a,{children:Object(r.jsx)(o,{})})}),document.getElementById("root"))}},[[25,1,2]]]);
+//# sourceMappingURL=main.0d9159e6.chunk.js.map
