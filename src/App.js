@@ -1,8 +1,15 @@
+import Home from "./pages/Home";
+import Portfolio from "./pages/Portfolio";
+import Blog from "./pages/Blog";
+import { Switch, Route } from "react-router-dom";
+
 function App() {
   return (
-    <div className="App">
-      <h1>Basic App</h1>
-    </div>
+    <Switch>
+      <Route path="/" component={Home} exact />
+      <Route path="/portfolio" component={Portfolio} />
+      <Route path="/blog" component={Blog} />
+    </Switch>
   );
 }
 
