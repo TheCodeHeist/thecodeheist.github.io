@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class="flex flex-1/4 flex-col items-center justify-center gap-4 border-r border-neutral-900 p-4"
+	class="flex flex-row items-center justify-evenly border-t border-neutral-900 p-4 md:flex-1/4 md:flex-col md:justify-center md:gap-4 md:border-r"
 >
 	<a
 		class={'border-b-2 border-neutral-950 text-lg hover:border-white' +

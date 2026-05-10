@@ -1,19 +1,23 @@
+<script lang="ts">
+	import { projects } from '$lib';
+</script>
+
 <div class="flex w-full flex-col gap-2">
-	<p class="text-4xl font-bold">Hello, this is Md Riyasat Hossain!</p>
-	<p class="text-lg text-neutral-400">
-		High-school Student ⏺󠁯 Software Engineer ⏺󠁯 Tech Enthusiast
+	<p class="text-2xl font-bold md:text-4xl">Hello, this is Md Riyasat Hossain!</p>
+	<p class="text-sm text-neutral-400 md:text-lg">
+		High-school Student • Software Engineer • Tech Enthusiast
 	</p>
 	<hr class="border border-neutral-900" />
 </div>
 
-<div class="flex w-full flex-col gap-2">
+<div class="flex w-full flex-col gap-2 text-sm md:text-base">
 	<p class="text-justify">
 		I'm an 18-year-old student, and a self-taught software engineer with a passion for building
 		impactful software. I have a strong interest in programming languages, compilers, and systems
 		programming, and I'm always eager to learn new technologies and improve my skills.
 	</p>
 
-	<p>
+	<p class="text-justify">
 		I've been building software since I was 9 &mdash; over a decade of turning ideas into working
 		products. I specialize in full-stack web development with a strong focus on <strong
 			>TypeScript</strong
@@ -43,4 +47,24 @@
 		If you're interested in collaborating, learning together, or just want to chat about tech, don't
 		hesitate to reach out. I'm always open to new connections and opportunities!
 	</p>
+</div>
+
+<div class="flex w-full flex-col gap-4">
+	<p class="text-xl font-bold md:text-2xl">Featured Projects</p>
+
+	<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+		{#each projects as project (project.id)}
+			<div class="flex flex-col gap-2 rounded-lg border border-neutral-900 p-4">
+				<h3 class="text-lg font-bold md:text-xl">{project.name}</h3>
+				<p class="text-sm text-neutral-400 md:text-base">{project.description}</p>
+				<a
+					href={project.repo}
+					target="_blank"
+					class="self-start rounded-md border border-neutral-900 bg-neutral-950 px-4 py-2 text-sm text-white hover:bg-white hover:text-neutral-950 md:text-base"
+				>
+					View on GitHub
+				</a>
+			</div>
+		{/each}
+	</div>
 </div>
