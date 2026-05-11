@@ -35,7 +35,7 @@
 			{#each socialLinks as data (data.id)}
 				{@const Icon = data.icon}
 
-				<a href={data.href} target="_blank">
+				<a href={data.href} rel="external" target="_blank">
 					<Icon title={data.name} />
 				</a>
 			{/each}

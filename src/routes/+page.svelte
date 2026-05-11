@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { projects } from '$lib';
+	import { hardSkills, projects, softSkills, educationQualifications } from '$lib';
 </script>
 
 <div class="flex w-full flex-col gap-2">
@@ -12,9 +12,9 @@
 
 <div class="flex w-full flex-col gap-2 text-sm md:text-base">
 	<p class="text-justify">
-		I'm an 18-year-old student, and a self-taught software engineer with a passion for building
-		impactful software. I have a strong interest in programming languages, compilers, and systems
-		programming, and I'm always eager to learn new technologies and improve my skills.
+		I'm a Bangladeshi 18-year-old student, and a self-taught software engineer with a passion for
+		building impactful software. I have a strong interest in programming languages, compilers, and
+		systems programming, and I'm always eager to learn new technologies and improve my skills.
 	</p>
 
 	<p class="text-justify">
@@ -50,10 +50,70 @@
 </div>
 
 <div class="flex w-full flex-col gap-4">
-	<p class="text-xl font-bold md:text-2xl">Featured Projects</p>
+	<p class="text-xl font-bold md:text-2xl">&lt;~~ Education ~~&gt;</p>
 
 	<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-		{#each projects as project (project.id)}
+		{#each educationQualifications.reverse() as qualification (qualification.id)}
+			<div
+				class={'flex flex-col gap-4 rounded-lg border border-neutral-900 p-4' +
+					(qualification.present ? ' bg-neutral-900' : ' bg-neutral-950')}
+			>
+				<div class="flex flex-col gap-1">
+					<h3 class="text-lg font-bold md:text-xl">{qualification.name}</h3>
+					<p class="text-sm text-neutral-400 md:text-base">
+						{qualification.batch}
+					</p>
+				</div>
+
+				<div class="flex flex-col gap-1">
+					<p class="text-sm text-neutral-400 md:text-base">
+						{qualification.from} &mdash; {qualification.to}
+					</p>
+
+					<p class="text-sm text-neutral-400 md:text-base">
+						{qualification.institution}
+					</p>
+				</div>
+			</div>
+		{/each}
+	</div>
+</div>
+
+<div class="flex w-full flex-col gap-4">
+	<p class="text-xl font-bold md:text-2xl">&lt;~~ Soft Skills ~~&gt;</p>
+
+	<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+		{#each softSkills as skill (skill.id)}
+			<div class="flex flex-col gap-2 rounded-lg border border-neutral-900 p-4">
+				<h3 class="text-lg font-bold md:text-xl">{skill.name}</h3>
+				<p class="text-sm text-neutral-400 md:text-base">
+					{skill.description}
+				</p>
+			</div>
+		{/each}
+	</div>
+</div>
+
+<div class="flex w-full flex-col gap-4">
+	<p class="text-xl font-bold md:text-2xl">&lt;~~ Hard Skills ~~&gt;</p>
+
+	<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+		{#each hardSkills as skill (skill.id)}
+			<div class="flex flex-col gap-2 rounded-lg border border-neutral-900 p-4">
+				<h3 class="text-lg font-bold md:text-xl">{skill.name}</h3>
+				<p class="text-sm text-neutral-400 md:text-base">
+					{skill.description}
+				</p>
+			</div>
+		{/each}
+	</div>
+</div>
+
+<div class="flex w-full flex-col gap-4">
+	<p class="text-xl font-bold md:text-2xl">&lt;~~ Featured Projects ~~&gt;</p>
+
+	<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+		{#each projects.filter((project) => project.featured) as project (project.id)}
 			<div class="flex flex-col gap-2 rounded-lg border border-neutral-900 p-4">
 				<h3 class="text-lg font-bold md:text-xl">{project.name}</h3>
 				<p class="text-sm text-neutral-400 md:text-base">{project.description}</p>
