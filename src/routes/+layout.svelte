@@ -27,6 +27,7 @@
 		</div>
 
 		<button
+			type="button"
 			class="block md:hidden"
 			onclick={() => (globalStates.popupNavState = !globalStates.popupNavState)}
 			aria-label="Toggle navigation menu"
