@@ -59,6 +59,7 @@
 				<p class="text-sm text-neutral-400 md:text-base">{project.description}</p>
 				<a
 					href={project.repo}
+					rel="external"
 					target="_blank"
 					class="self-start rounded-md border border-neutral-900 bg-neutral-950 px-4 py-2 text-sm text-white hover:bg-white hover:text-neutral-950 md:text-base"
 				>
