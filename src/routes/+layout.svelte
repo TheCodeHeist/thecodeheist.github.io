@@ -71,7 +71,7 @@
 	<section class="flex h-full w-full flex-1 flex-col-reverse overflow-hidden md:flex-row">
 		<Sidebar />
 
-		<section class="flex h-full w-full flex-col gap-8 overflow-y-auto p-8">
+		<section class="flex h-full w-full flex-col gap-12 overflow-y-auto p-8">
 			{@render children()}
 		</section>
 	</section>

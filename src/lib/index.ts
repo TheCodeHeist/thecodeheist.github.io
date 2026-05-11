@@ -1,5 +1,12 @@
 // place files you want to import through the `$lib` alias in this folder.
-import { SiGithub, SiX, SiDevdotto, SiSubstack } from '@icons-pack/svelte-simple-icons';
+import {
+	SiGithub,
+	SiX,
+	SiDevdotto,
+	SiSubstack,
+	SiGmail,
+	SiDiscord
+} from '@icons-pack/svelte-simple-icons';
 import { resolve } from '$app/paths';
 
 export const socialLinks = [
@@ -171,5 +178,20 @@ export const hardSkills = [
 		name: 'Basic Cybersecurity',
 		description:
 			'I have a basic understanding of cybersecurity principles and practices, which allows me to implement basic security measures in my projects and be aware of potential security risks.'
+	}
+];
+
+export const contactLinks = [
+	{
+		id: 1,
+		name: 'Email (riyasat.hossain.29@gmail.com)',
+		href: 'mailto:riyasat.hossain.29@gmail.com',
+		icon: SiGmail
+	},
+	{
+		id: 2,
+		name: 'Discord (the_code_heist)',
+		href: 'https://discord.com/users/722334932151697478',
+		icon: SiDiscord
 	}
 ];
