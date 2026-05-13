@@ -98,20 +98,20 @@ export const projects = [
 export const educationQualifications = [
 	{
 		id: 1,
-		name: 'International General Certificate of Secondary Education (IGCSE)',
-		batch: 'May 2024 & November 2024',
-		institution: 'Maple Leaf International School, Dhaka',
-		from: 'Jan 2017',
-		to: 'Nov 2024'
-	},
-	{
-		id: 2,
 		name: 'International Advanced Level (IAL)',
 		batch: 'January 2027 (On-going)',
 		institution: 'Maple Leaf International School, Dhaka',
 		present: true,
 		from: 'Jan 2025',
 		to: 'Present'
+	},
+	{
+		id: 2,
+		name: 'International General Certificate of Secondary Education (IGCSE)',
+		batch: 'May 2024 & November 2024',
+		institution: 'Maple Leaf International School, Dhaka',
+		from: 'Jan 2017',
+		to: 'Nov 2024'
 	}
 ];
 

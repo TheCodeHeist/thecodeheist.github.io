@@ -1,6 +1,10 @@
 <script lang="ts">
 	import { hardSkills, projects, softSkills, educationQualifications, contactLinks } from '$lib';
 	import { resolve } from '$app/paths';
+
+	const age = Math.floor(
+		(Date.now() - new Date('2007-10-04').getTime()) / (1000 * 60 * 60 * 24 * 365.25)
+	);
 </script>
 
 <div class="flex w-full flex-col gap-2">
@@ -14,7 +18,7 @@
 
 <div class="flex w-full flex-col gap-2 text-sm md:text-base">
 	<p class="text-justify">
-		I'm a Bangladeshi 18-year-old student, and a self-taught software engineer with a passion for
+		I'm a Bangladeshi {age}-year-old student, and a self-taught software engineer with a passion for
 		building impactful software. I have a strong interest in programming languages, compilers, and
 		systems programming, and I'm always eager to learn new technologies and improve my skills.
 	</p>
@@ -58,7 +62,7 @@
 	</div>
 
 	<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-		{#each educationQualifications.reverse() as qualification (qualification.id)}
+		{#each educationQualifications as qualification (qualification.id)}
 			<div
 				class={'flex flex-col gap-4 rounded-lg border border-neutral-900 p-4' +
 					(qualification.present ? ' bg-neutral-900' : ' bg-neutral-950')}
